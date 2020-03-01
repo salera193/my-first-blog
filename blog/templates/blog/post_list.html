@@ -4,14 +4,14 @@
     </head>
     <body>
         <div>
-            <h1>Hello cain</h1>
+            <h1>Django Girls Blog</h1>
         </div>
-
+    {% for post in posts %}
         <div>
-            <p>私は管理論の単位を落としました。</p>
-            <h2><a href="">あの落ち武者は許さない</a></h2>
-            <p>まぁ授業出てないんだけどね</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
+    {% endfor %}
     </body>
 </html>
